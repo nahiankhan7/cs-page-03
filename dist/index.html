@@ -7,20 +7,53 @@
     <link rel="stylesheet" href="./output.css" />
   </head>
   <body
-    class="h-dvh w-full relative overflow-y-auto bg-custom-image bg-cover bg-no-repeat bg-center">
+    class="h-dvh w-full relative overflow-y-auto bg-custom-image bg-cover bg-no-repeat bg-center font-popins">
     <div class="absolute flex flex-col h-dvh justify-center">
-      <div class="bg-black/50 ml-2 p-20">
-        <div class="">
-          <h1 class="text-4xl text-white">We’re Launching Soon!</h1>
-          <p class="text-2xl text-white">
+      <div class="bg-gray-500 bg-opacity-40 mx-5 p-16 rounded-lg">
+        <div class="mb-10">
+          <h1 class="text-4xl text-gray-200 mb-3 uppercase tracking-widest">
+            We’re Launching <span class="text-red-600 font-bold">Soon</span>!
+          </h1>
+          <p class="text-2xl text-gray-300">
             We’re working hard to bring you an amazing new experience. Check
             back soon!
           </p>
         </div>
 
-        <div class="">
-          <input type="text" />
-          <button class="text-white">Subscribe</button>
+        <div class="relative flex items-center max-w-full w-[500px] mb-[80px]">
+          <input
+            required
+            placeholder="Enter your email here..."
+            type="text"
+            class="w-full p-4 bg-gray-500 text-white bg-opacity-60 border-none ring-1 ring-gray-400 hover:ring-gray-300 duration-300 outline-none rounded-full" />
+          <button
+            class="absolute text-white bg-red-600 bg-opacity-80 right-[7px] p-2 px-4 rounded-full ring-1 ring-gray-400 duration-300 hover:bg-opacity-90 focus:bg-red-600 focus:ring-gray-300 active:ring-gray-300 cursor-pointer">
+            Subscribe
+          </button>
+        </div>
+
+        <!-- reverse time countdown -->
+        <div
+          class="flex items-center lg:gap-x-8 gap-x-20 mt-5 lg:mt-10 text-gray-200 font-semibold">
+          <div class="flex flex-col items-center justify-center">
+            <p id="days" class="text-7xl">00</p>
+            <span class="text-base">Days</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center">
+            <p id="hours" class="text-7xl">00</p>
+            <span class="text-base">Hours</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center">
+            <p id="minute" class="text-7xl">00</p>
+            <span class="text-base">Minutes</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center">
+            <p id="second" class="text-7xl">00</p>
+            <span class="text-base">Second</span>
+          </div>
         </div>
       </div>
     </div>

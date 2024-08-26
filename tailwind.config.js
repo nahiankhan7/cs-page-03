@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         "custom-image": "url('./images/pxlss.jpg')",
       },
+      fontFamily: {
+        popins: ["Poppins", "sans-serif"],
+      },
     },
   },
   plugins: [],
