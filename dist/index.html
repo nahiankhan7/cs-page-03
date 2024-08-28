@@ -5,37 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cs page 03</title>
     <link rel="stylesheet" href="./output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
     <style>
       .anim-container {
         background: #000000; /* Black background for better contrast */
         overflow: hidden;
         position: relative;
       }
-      i {
+      h6 {
         position: absolute;
         border-bottom-left-radius: 5px;
         border-bottom-right-radius: 5px;
         animation: animate 5s linear infinite;
       }
-      i:nth-child(7n + 1) {
+      h6:nth-child(7n + 1) {
         background: linear-gradient(to bottom, transparent, #ff0000);
       }
-      i:nth-child(7n + 2) {
+      h6:nth-child(7n + 2) {
         background: linear-gradient(to bottom, transparent, #ff7f00);
       }
-      i:nth-child(7n + 3) {
+      h6:nth-child(7n + 3) {
         background: linear-gradient(to bottom, transparent, #ffff00);
       }
-      i:nth-child(7n + 4) {
+      h6:nth-child(7n + 4) {
         background: linear-gradient(to bottom, transparent, #00ff00);
       }
-      i:nth-child(7n + 5) {
+      h6:nth-child(7n + 5) {
         background: linear-gradient(to bottom, transparent, #0000ff);
       }
-      i:nth-child(7n + 6) {
+      h6:nth-child(7n + 6) {
         background: linear-gradient(to bottom, transparent, #4b0082);
       }
-      i:nth-child(7n + 7) {
+      h6:nth-child(7n + 7) {
         background: linear-gradient(to bottom, transparent, #8a2be2);
       }
 
@@ -58,18 +61,37 @@
       class="relative z-[10] grid grid-cols-1 gap-8 min-h-screen p-4 lg:grid-cols-2 lg:gap-12">
       <!-- Content text and form button -->
       <div
-        class="bg-gray-500 bg-opacity-20 rounded-md p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col items-center justify-center">
-        <div class="mb-8 text-center">
-          <p class="text-white text-4xl md:text-5xl lg:text-6xl font-bold">
+        class="bg-gray-500 bg-opacity-20 rounded-md p-8 md:p-12 lg:p-16 xl:p-20 flex flex-col gap-y-14 items-center justify-center">
+        <!-- text -->
+        <div class="text-center">
+          <h1
+            class="text-white uppercase tracking-widest text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
             Coming Soon
-          </p>
-          <h1 class="text-white text-2xl md:text-3xl lg:text-4xl font-semibold">
-            New Website
           </h1>
+
+          <p
+            class="text-white uppercase tracking-wider text-2xl md:text-3xl lg:text-4xl font-semibold mb-5">
+            New Website
+          </p>
+
+          <p class="text-white text-center text-base md:text-xl font-light">
+            Get ready for something amazing. We’re working hard behind the
+            scenes to bring you an exceptional experience. Stay tuned for our
+            launch and be among the first to know!
+          </p>
+        </div>
+
+        <div class="flex flex-col justify-center items-center gap-y-8">
+          <p class="text-gray-100 font-semibold tracking-widest italic">
+            Stay tuned for more updates!
+          </p>
+          <i
+            class="fa-solid fa-arrow-down-long text-gray-100 font-semibold text-xl animate-bounce"></i>
         </div>
 
         <!-- Input and button field -->
-        <div class="relative flex items-center w-full max-w-sm">
+        <div
+          class="relative flex items-center w-full max-w-sm md:max-w-md lg:max-w-lg">
           <input
             required
             placeholder="Enter your email here..."
@@ -80,11 +102,26 @@
             Subscribe
           </button>
         </div>
+
+        <!-- social contact -->
+        <div class="flex items-center gap-5">
+          <a class="font-icon" href=""><i class="fa-brands fa-facebook"></i></a>
+          <a class="font-icon" href=""
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+          <a class="font-icon" href=""
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a class="font-icon" href=""><i class="fa-brands fa-whatsapp"></i></a>
+          <a class="font-icon" href="mailto:thenewkhan7@gmail.com"
+            ><i class="fa-regular fa-envelope"></i
+          ></a>
+        </div>
       </div>
 
       <!-- Reverse time countdown -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 text-gray-200 font-semibold items-center justify-center">
+        class="flex flex-row items-center justify-center text-gray-200 font-semibold gap-6 md:gap-16">
         <div class="flex flex-col items-center justify-center">
           <p id="days" class="text-4xl md:text-5xl lg:text-6xl">00</p>
           <span class="text-sm md:text-base">Days</span>
@@ -113,7 +150,7 @@
         let animContainer = document.querySelector(".anim-container");
 
         for (let i = 0; i < amount; i++) {
-          let drop = document.createElement("i");
+          let drop = document.createElement("h6");
 
           // Set size, position, delay, and duration
           let size = Math.random() * 5 + 1; // Size between 1 and 6px
